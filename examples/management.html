@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+      Zixta Smart Techno
+    </title>
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!--     Fonts and icons     -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
+    />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+  </head>
+
+  <body class="">
+    <div class="wrapper">
+      <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="logo text-center">
+          <a href="./dashboard.html" class="simple-text logo-normal">
+            <div style="margin: 0; padding: 0;">
+              <img src="../assets/img/zxta-logo.png" width="100px" />
+            </div>
+          </a>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li>
+              <a href="./dashboard.html">
+                <i class="nc-icon nc-bank"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li>
+              <a href="./document.html">
+                <i class="nc-icon nc-paper"></i>
+                <p>Document</p>
+              </a>
+            </li>
+            <li>
+              <a href="./map.html">
+                <i class="nc-icon nc-pin-3"></i>
+                <p>Find / Live View</p>
+              </a>
+            </li>
+            <li>
+              <a href="./trip.html">
+                <i class="nc-icon nc-bus-front-12"></i>
+                <p>Trip History</p>
+              </a>
+            </li>
+            <li>
+              <a href="./poi.html">
+                <i class="nc-icon nc-tile-56"></i>
+                <p>Point Of Interest</p>
+              </a>
+            </li>
+            <li>
+              <a href="./cost.html" class="active">
+                <i class="nc-icon nc-single-copy-04"></i>
+                <p>Cost Report</p>
+              </a>
+            </li>
+            <li>
+              <a href="./notifications.html">
+                <i class="nc-icon nc-bell-55"></i>
+                <p>Notifications</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./management.html">
+                <i class="nc-icon nc-laptop"></i>
+                <p>Management</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <nav
+          class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent"
+        >
+          <div class="container-fluid">
+            <div class="navbar-wrapper">
+              <div class="navbar-toggle">
+                <button type="button" class="navbar-toggler">
+                  <span class="navbar-toggler-bar bar1"></span>
+                  <span class="navbar-toggler-bar bar2"></span>
+                  <span class="navbar-toggler-bar bar3"></span>
+                </button>
+              </div>
+              <a class="navbar-brand" href="javascript:;">Zixta Smart Techno</a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navigation"
+              aria-controls="navigation-index"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+              <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navigation"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link btn-rotate" href="javascript:;">
+                    <div class="logo-image-small">
+                      <img src="../assets/img/logo-small.png" width="25px" />
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item btn-rotate dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="nc-icon nc-settings-gear-65"></i>
+                    <p>
+                      <span class="d-lg-none d-md-block">Some Actions</span>
+                    </p>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-right"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="../login-page/index.html"
+                      >Logout</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Driver Management</h4>
+                  <p class="card-category">
+                    <button
+                      class="btn btn-success"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseExample"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      CREATED
+                    </button>
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table
+                      id="example"
+                      class="table table-striped table-bordered"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Nama Driver</th>
+                          <th style="text-align: center;">Alamat</th>
+                          <th style="text-align: center;">No. Telp</th>
+                          <th style="text-align: center;">No. KTP</th>
+                          <th style="text-align: center;">No. SIM B2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>YUDI</td>
+                          <td>
+                            KP. Lebak Picung RT 004/RW 002, Kelurahan/Desa:
+                            Margatirta, Kecamatan: Cimarga.
+                          </td>
+                          <td>087882399358</td>
+                          <td>3602111703880005</td>
+                          <td>820213220502</td>
+                        </tr>
+                        <tr>
+                          <td>SUPRIADI</td>
+                          <td>
+                            KP. Legok Kemang RT 001/RW 006, Kelurahan/Desa:
+                            Hambaro, Kecamatan: Nanggung.
+                          </td>
+                          <td>085781549047</td>
+                          <td>3603111202880005</td>
+                          <td>871113220414</td>
+                        </tr>
+                        <tr>
+                          <td>DANIAL</td>
+                          <td>
+                            KP. Wakap RT 002/RW 001, Kelurahan/Desa: Wakap,
+                            Kecamatan: Bantarkalong.
+                          </td>
+                          <td>087748371314</td>
+                          <td>3278050409840009</td>
+                          <td>670913340820</td>
+                        </tr>
+                        <tr>
+                          <td>SUDIH</td>
+                          <td>
+                            KP. Jolpot RT 004/RW 005, Kelurahan/Desa: Bagoang,
+                            Kecamatan: Jasinga.
+                          </td>
+                          <td>085781082521</td>
+                          <td>3201192205940001</td>
+                          <td>890513340100</td>
+                        </tr>
+                        <tr>
+                          <td>SUPARMAN</td>
+                          <td>
+                            KP. Tegal Murni RT 001/RW 002, Keluraha/Desa: Benda,
+                            Kecamatan: Sukamulya.
+                          </td>
+                          <td>087789303547</td>
+                          <td>3603270905850001</td>
+                          <td>850512051001299</td>
+                        </tr>
+                        <tr>
+                          <td>RAMDONI</td>
+                          <td>
+                            KP. Cisauk RT 003/RW 005, Kelurahan/Desa: Situilir,
+                            Kecamatan: Cibungbulang.
+                          </td>
+                          <td>081384890536</td>
+                          <td>3201392001930006</td>
+                          <td>930125268720</td>
+                        </tr>
+                        <tr>
+                          <td>IYAN MULYANA</td>
+                          <td>
+                            Dusun Pengkolan RT 009/RW 005, Kelurahan/Desa:
+                            Rancamulya, Kecamatan: Patokbeusi.
+                          </td>
+                          <td>087732559873</td>
+                          <td>3213160107870374</td>
+                          <td>870713360792</td>
+                        </tr>
+                        <tr>
+                          <td>AGUNG SAPUTRA</td>
+                          <td>
+                            Dusun Pasirjati RT 011/RW 003, Kelurahan/Desa:
+                            Pusakajaya, Kecamatan: Pusakajaya.
+                          </td>
+                          <td>087877683345</td>
+                          <td>3213301705970010</td>
+                          <td>970513300667</td>
+                        </tr>
+                        <tr>
+                          <td>ABDULLOH</td>
+                          <td>
+                            KP. Badak RT 001/RW 001, Kelurahan/Desa: Badak Anom,
+                            Kecamatan: Sindang Jaya.
+                          </td>
+                          <td>087809891411</td>
+                          <td>3603290507820003</td>
+                          <td>82071205971954</td>
+                        </tr>
+                        <tr>
+                          <td>KOMAR</td>
+                          <td>
+                            KP. Cisaranteni RT 004/RW 002, Kelurahan/Desa:
+                            Wangunjaya, Kecamatan: Leuwisadeng.
+                          </td>
+                          <td>085778445842</td>
+                          <td>3201391906900003</td>
+                          <td>90062581675</td>
+                        </tr>
+                        <tr>
+                          <td>HENDRA</td>
+                          <td>
+                            KP. Kemuning RT 001/RW 004, Kelurahan/Desa: Buniayu,
+                            Kecamatan: Sukamulya.
+                          </td>
+                          <td>087879451566</td>
+                          <td>3206122405850001</td>
+                          <td>850513460762</td>
+                        </tr>
+                        <tr>
+                          <td>IYUS ABDUL AZIS</td>
+                          <td>
+                            KP. Wakap RT 002/RW 001, Kelurahan/Desa: Wakap,
+                            Kecamatan: Bantarkalong.
+                          </td>
+                          <td>087885162367</td>
+                          <td>3206081305880002</td>
+                          <td>880513460762</td>
+                        </tr>
+                        <tr>
+                          <td>AMIRUDIN</td>
+                          <td>
+                            Dusun Pasirjati RT 016/RW 004, Kelurahan/Desa:
+                            Pusakajaya, Kecamatan: Pusakajaya.
+                          </td>
+                          <td>087883420157</td>
+                          <td>3213300601940008</td>
+                          <td>940125265847</td>
+                        </tr>
+                        <tr>
+                          <td>NURYANA</td>
+                          <td>
+                            KP. Cihujan RT 004/RW 001, Kelurahan/Desa: Lebak,
+                            Kecamatan: Ciomas.
+                          </td>
+                          <td>085779265872</td>
+                          <td>3602140201820011</td>
+                          <td>840113340761</td>
+                        </tr>
+                        <tr>
+                          <td>RASAD</td>
+                          <td>
+                            KP. Tarikolot RT 006/RW 004, Kelurahan/Desa:
+                            Kaliasin, Kecamatan: Sukamulya.
+                          </td>
+                          <td>087878713811</td>
+                          <td>3603060903720001</td>
+                          <td>7203120582595</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Fleet Management</h4>
+                  <p class="card-category">
+                    <button
+                      class="btn btn-success"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseExample"
+                      aria-expanded="false"
+                      aria-controls="collapseExample"
+                    >
+                      CREATED
+                    </button>
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive"></div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <footer class="footer footer-black footer-white">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="credits ml-auto">
+                <span class="copyright">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , made with <i class="fa fa-heart heart"></i> by Zixta
+                  Logistic Services
+                </span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+    <!-- Chart JS -->
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script
+      src="../assets/js/paper-dashboard.min.js?v=2.0.1"
+      type="text/javascript"
+    ></script>
+    <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="../assets/demo/demo.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.3.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+  </body>
+</html>
